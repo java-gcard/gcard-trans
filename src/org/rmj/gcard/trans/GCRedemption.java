@@ -525,7 +525,8 @@ public class GCRedemption implements GTransaction {
                                    ", nLedgerNo" + 
                              " FROM SP_Inventory" +      
                              " WHERE sPartsIDx = " + SQLUtil.toSQL(loRS.getString("sPartsIDx")) +
-                               " AND sBranchCd = " + SQLUtil.toSQL(poGRider.getBranchCode()));
+                               " AND sBranchCd = " + SQLUtil.toSQL(poGRider.getBranchCode()) +
+                               " AND nQtyOnHnd > 0");
                 Statement loStmt1 = null;
                 ResultSet loRS1 = null;
               
